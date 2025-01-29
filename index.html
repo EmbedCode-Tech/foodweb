@@ -64,23 +64,35 @@ body {
 }
 
 /*  Paragraph Styling */
-p {
-        font-size: 16px;
-    }
-
-    @media (max-width: 768px) {
-        p {
-            font-size: 14px;
-        }
-    }
-
-    @media (max-width: 480px) {
-        p {
-            font-size: 12px;
+#About {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
+            padding: 20px;
         }
-    }
+        {
+            max-width: 80%;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            word-wrap: break-word;
+        }
 
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            p {
+                font-size: 1rem;
+                max-width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            p {
+                font-size: 0.9rem;
+                max-width: 95%;
+                text-align: left;
+            }
+        }
 
 /*  Form Styling */
 .form-container {
