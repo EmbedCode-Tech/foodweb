@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>  food quality check </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    border-radius: 0;
+    margin-bottom: 0;
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: white;
+}
+.navbar-inverse .navbar-nav > li > a:hover {
+    background-color: #444;
+}
+
+/* Home Section */
+#home {
+    text-align: center;
+    padding: 50px 20px;
+}
+#home img {
+    width: 100%;
+    max-height: 700px;
+    object-fit: cover;
+}
+h1, h4 {
+    margin: 10px 0;
+}
+
+/* Background Section */
+.bg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: rgb(11, 10, 10);
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    min-height: 100vh;
+}
+.bg p {
+    max-width: 800px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 5px;
+    word-wrap: break-word;
+}
+
+/* Table Styles */
+table {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+}
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+input[type='text'] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button */
+asp\:Button {
+    background-color: #db3434;
+    color: rgb(15, 14, 14);
+    border: none;
+    padding: 10px 35px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+asp\:Button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar-toggle {
+        float: right;
+    }
+    .navbar-nav {
+        text-align: center;
+    }
+    .bg {
+        height: auto;
+        padding: 40px 10px;
+    }
+    table {
+        width: 100%;
+    }
+    td {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    #home img {
+        max-height: 300px;
+    }
+}
+
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse" id="top">
+		<div class="navbar-header">
+			<button type="button" data-toggle="collapse" class="navbar-toggle" data-target="#mydiv">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+		</div>
+        <div id="mydiv" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+               <li><a href="#home">Home</a></li>
+                    <li><a href="#home">About</a></li>
+                 <li><a href="#home">Contact</a></li>	
+                 </ul>
+             </div>
+             </nav>
+             <div id="home">
+               
+                <center>
+                   <h1>Rohit Jadhav</h1>
+                   <h4>Software Developer</h4>
+                   </center>
+                   <img src="D:/foodwebsite/foodimage.jpg" class="img-fluid rounded" alt="My Local Image">
+                   </div>
+             <div class="bg" style="background-image: url('D:\foodwebsite.png'); background-size: cover; background-position: center; height: 100vh;">
+               <p align="center">
+                hwgwddiqdqwdqgdyajhjhqadqwgwducj  qwwdqwvwddhvdhjhjasjdjhvhdvqywuwddjhjhascjhsvahccvyuvcjcvcjhasvccygqvj
+                ddvqwvdvjjacabavcjhcvj  cb bccasvcvcvcacjasc
+                acvghavyvajhcvsajhhccggysacgavcchvac
+                cashcgygacycgjascvhcasjhcvhasfcascvcvhasvcavcvjhcvcac
+                cbhjacgyuacjvacavcasca
+                acbasyccyuacacbajshcashcciauchascasjhvchaasghgaacjahcbchascjhsachcf
+            </p>
+            <table align="center" class="auto-style2">
+
+                <tr>
+                    <td align="center">pH </td>
+                    <td align="center"> 
+                        <asp:TextBox ID="txtph" runat="server" Height="45px"></asp:TextBox></td>
+                </tr>
+                 <tr>
+                    <td align="center">Temperature</td>
+                    <td align="center">
+                        <asp:TextBox ID="txttemp" runat="server" Height="45px"></asp:TextBox></td>
+                </tr>
+                 <tr>
+                    <td align="center">Gas </td>
+                    <td align="center">
+                        <asp:TextBox ID="txtgas" runat="server" Height="45px"></asp:TextBox></td>
+                </tr>
+                 <tr>
+                    <td align="center">Turbidity  </td>
+                    <td align="center">
+                        <asp:TextBox ID="txtturbidity" runat="server" Height="45px"></asp:TextBox></td>
+                </tr>
+                          
+             
+            </table>
+                
+                    <td align="center">
+                        <asp:Button ID="btnsub" runat="server" Text="Submit" OnClick="btnsub_Click" style="height: 35px" /></td>
+      
+
+        </div>
+
+    </form>
+</body>
+</html>
