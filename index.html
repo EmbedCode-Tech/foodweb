@@ -104,12 +104,24 @@ body {
     text-align: justify;
 }
 
-.paragraph-box p {
-    font-size: 18px;
-    color: #333;
-    line-height: 1.6;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .paragraph-box {
+        max-width: 90%;
+        padding: 15px;
+    }
 }
 
+@media (max-width: 480px) {
+    .paragraph-box {
+        max-width: 95%;
+        padding: 10px;
+    }
+
+    .paragraph-box p {
+        font-size: 16px;
+    }
+}
 
 /*  Form Styling */
 .form-container {
