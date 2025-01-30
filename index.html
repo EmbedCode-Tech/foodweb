@@ -276,24 +276,25 @@ td {
                 </p>
             </div>
             <div>
-                <table align="center" class="auto-style2">
-                    <tr>
-                        <td align="center">pH </td>
-                        <td align="center"><input type="text"  placeholder="Enter value"></td></td>
-                    </tr>
-                    <tr>
-                        <td align="center">Temperature</td>
-                        <td align="center"><input type="text"  placeholder="Enter value"></td>
-                    </tr>
-                    <tr>
-                        <td align="center">Gas </td>
-                        <td align="center"><input type="text" placeholder="Enter value"></asp:TextBox></td>
-                    </tr>
-                    <tr>
-                        <td align="center">Turbidity  </td>
-                        <td align="center"><input type="text"  placeholder="Enter value"></td></td>
-                    </tr>
-                </table>s
+               <table align="center">
+                   <tr>
+                      <td align="center">pH </td>
+                      <td align="center"><input type="text" id="phValue" readonly></td> 
+		   </tr>
+                   <tr>
+                      <td align="center">Temperature</td>
+                      <td align="center"><input type="text" id="temperatureValue" readonly></td>
+   		  </tr>
+                     <tr>
+                      <td align="center">Gas </td>
+                      <td align="center"><input type="text" id="gasValue" readonly></td>
+                  </tr>
+                   <tr>
+                       <td align="center">Turbidity</td>
+                       <td align="center"><input type="text" id="turbidityValue" readonly></td>
+                  </tr>
+        </table>
+
             </div>
             <div align="center" class="container">
                 <button class="button" onclick="showMessage()">Submit</button>
