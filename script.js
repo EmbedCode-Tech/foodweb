@@ -1,9 +1,5 @@
-function showMessage() {
-    document.getElementById("message").classList.remove("hidden");
-}
-
 function fetchSensorData() {
-    fetch('http://192.168.4.1/') // Replace with your ESP32 IP
+    fetch("http://YOUR_ESP32_IP/") // Replace with your ESP32's IP address
         .then(response => response.json())
         .then(data => {
             document.getElementById("phValue").value = data.ph;
