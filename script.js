@@ -1,5 +1,5 @@
 function fetchSensorData() {
-    fetch("http://192.168.1.100/") // Replace with your ESP32's IP address
+    fetch("http://192.168.222.208/") // Replace with your ESP32's IP address
         .then(response => response.json())
         .then(data => {
             document.getElementById("phValue").value = data.ph;
