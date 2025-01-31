@@ -1,14 +1,23 @@
 function fetchSensorData() {
-    fetch("http://192.168.222.208/") // Replace with your ESP32's IP address
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById("phValue").value = data.ph;
-            document.getElementById("temperatureValue").value = data.temperature;
-            document.getElementById("gasValue").value = data.gas;
-            document.getElementById("turbidityValue").value = data.turbidity;
-        })
-        .catch(error => console.error("Error fetching data:", error));
+    // Hardcoded sensor values
+    const sensorData = {
+        ph: 6.8,
+        temperature: 25.3,
+        gas: 0.5,
+        turbidity: 2.1
+    };
+
+    // Updating the input fields with hardcoded values
+    document.getElementById("phValue").value = sensorData.ph;
+    document.getElementById("temperatureValue").value = sensorData.temperature + " °C";
+    document.getElementById("gasValue").value = sensorData.gas;
+    document.getElementById("turbidityValue").value = sensorData.turbidity;
 }
 
-// Fetch data every 5 seconds
-setInterval(fetchSensorData, 5000);
+// Function to show the success message when clicking the submit button
+function showMessage() {
+    document.getElementById("message").classList.remove("hidden");
+}
+
+// Call the function when the page loads
+document.addEventListener("DOMContentLoaded", fetchSensorData);
