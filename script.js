@@ -1,7 +1,7 @@
 async function fetchSensorData() {
     try {
         // Simulating ESP32 sending JSON data (Replace with actual ESP32 IP address)
-        const response = await fetch("http://192.168.1.100/sensor-data"); // Change to your ESP32 IP
+        const response = await fetch("http://192.168.222.208/sensor-data"); // Change to your ESP32 IP
         const sensorData = await response.json(); // Convert response to JSON
 
         // Updating the input fields with ESP32 data
