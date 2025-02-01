@@ -140,7 +140,7 @@ input[type="text"] {
     font-size: 16px;
 }
 
-/*  Table Styling */
+/*  Table Styling 
 table {
     width: 60%;
     margin: 20px auto;
@@ -171,8 +171,8 @@ input {
     color: #333;
     box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
-
-/* Responsive Design */
+*/
+/* Responsive Design 
 @media (max-width: 768px) {
     table {
         width: 90%;
@@ -187,7 +187,91 @@ input {
         font-size: 14px;
     }
 }
+*/
+table {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
 
+/* Table Header */
+th {
+    background-color: #28a745; /* Green Header */
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+}
+
+/* Table Cells */
+td {
+    padding: 12px;
+    text-align: center;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Alternate Row Color */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover Effect */
+tr:hover {
+    background-color: #d4edda;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    table {
+        width: 100%;
+    }
+    td, th {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+        font-size: 14px;
+    }
+    th, td {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* Fully Responsive for Small Screens */
+@media (max-width: 480px) {
+    table {
+        width: 100%;
+        font-size: 12px;
+    }
+    th, td {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+    }
+    th {
+        background-color: #218838;
+        text-align: left;
+    }
+    td {
+        border-bottom: none;
+    }
+    tr {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 10px;
+    }
+}
 
 /*  Button Styling */
 .btn-custom {
