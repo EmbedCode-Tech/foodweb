@@ -1,32 +1,19 @@
-async function fetchSensorData() {
-    try {
-        // Simulating ESP32 sending JSON data (Replace with actual ESP32 IP address)
-        const response = await fetch("http://192.168.222.208/sensor-data"); // Change to your ESP32 IP
-        const sensorData = await response.json(); // Convert response to JSON
-
-        // Updating the input fields with ESP32 data
-        document.getElementById("phValue").value = sensorData.ph;
-        document.getElementById("temperatureValue").value = sensorData.temperature + " °C";
-        document.getElementById("gasValue").value = sensorData.gas;
-        document.getElementById("turbidityValue").value = sensorData.turbidity;
-
-    } catch (error) {
-        console.error("Error fetching data:", error);
-        alert("Failed to retrieve data from ESP32!");
+function fetchData() {
+        fetch("https://api.jsonbin.io/v3/b/679db215e41b4d34e4822105/latest", {
+            headers: {
+                "X-Master-Key": "$2a$10$oSs7q70C322rgLiDgmdhXOFlhY6w49XuiOOU5vTEFhmkfBWlhUbga"
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            let record = data.record; // Extract actual data
+            document.getElementById("ph").innerText = record.ph;
+            document.getElementById("temperature").innerText = record.temperature;
+            document.getElementById("gas").innerText = record.gas;
+            document.getElementById("turbidity").innerText = record.turbidity;
+        })
+        .catch(error => console.log("Error fetching data: ", error));
     }
-}
 
-// Function to show the success message when clicking the submit button
-function showMessage() {
-    const messageElement = document.getElementById("message");
-    messageElement.classList.remove("hidden");
-    messageElement.textContent = "Data Saved Successfully! ✅";
-
-    // Hide message after 3 seconds
-    setTimeout(() => {
-        messageElement.classList.add("hidden");
-    }, 3000);
-}
-
-// Call the function when the page loads
-document.addEventListener("DOMContentLoaded", fetchSensorData);
+    setInterval(fetchData, 5000); // Fetch data every 5 seconds
+    fetchData();
