@@ -63,20 +63,7 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/*  Paragraph Styling 
-#About {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-        }
-        {
-            max-width: 80%;
-            font-size: 1.2rem;
-            line-height: 1.6;
-            word-wrap: break-word;
-        }
+
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -140,54 +127,7 @@ input[type="text"] {
     font-size: 16px;
 }
 
-/*  Table Styling 
-table {
-    width: 60%;
-    margin: 20px auto;
-    border-collapse: collapse;
-    background-color: #f8f9fa;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-}
 
-td {
-    padding: 15px;
-    border: 1px solid #ddd;
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-}
-
-input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 16px;
-    background-color: #fff;
-    color: #333;
-    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
-}
-*/
-/* Responsive Design 
-@media (max-width: 768px) {
-    table {
-        width: 90%;
-    }
-
-    td {
-        font-size: 16px;
-        padding: 10px;
-    }
-
-    input {
-        font-size: 14px;
-    }
-}
-*/
 table {
     width: 80%;
     max-width: 600px;
@@ -339,6 +279,7 @@ tr:hover {
         max-height: 300px;
     }
 }
+		/*
  #contact {
     background-color: #f4f4f4;
     padding: 20px;
@@ -365,8 +306,8 @@ tr:hover {
 #contact ul li {
     margin-bottom: 10px;
 }
-
-/* Responsive Design */
+*/
+/* Responsive Design 
 @media (max-width: 600px) {
     #contact {
         width: 90%;
@@ -380,7 +321,7 @@ tr:hover {
     #contact ul {
         font-size: 16px;
     }
-}
+}*/
 
         </style>
         </head>
@@ -425,32 +366,29 @@ tr:hover {
             <th>Parameter</th>
             <th>Value</th>
         </tr>
-        <tr><td>pH</td><td id="ph">Loading...</td></tr>
         <tr><td>Temperature</td><td id="temperature">Loading...</td></tr>
-        <tr><td>Gas</td><td id="gas">Loading...</td></tr>
-        <tr><td>Turbidity</td><td id="turbidity">Loading...</td></tr>
+        <tr><td>Humidity</td><td id="humidity">Loading...</td></tr>
+        <tr><td>Light</td><td id="light">Loading...</td></tr>
+        <tr><td>MQ3</td><td id="mq3">Loading...</td></tr>
        </table>
 		 <br>
 		  <br>
 
             </div>
-            <div align="center" class="container">
+            <!--div align="center" class="container">
                 <button class="button" onclick="showMessage()">Submit</button>
                 <p id="message" class="hidden">Data Saved Successfully! ✅</p>
-            </div>
+           </div-->
        </div>   
-	          <br>
-		  <br>
-	          <br>
-		  <br>
-            <div id="contact">
+	       
+            <!--div id="contact">
 		    <center><h2>Contact</h2>
 			<ul>
 			    <br> contact no: 8999140149</br> 
 			    <br>Email id: example123@gmail</br> 
 			</ul>
 		</center>
-        </div>	
+            </div-->	
     </form>
 	<script>
    function showMessage() {
@@ -474,10 +412,10 @@ function fetchData() {
         .then(response => response.json())
         .then(data => {
             let record = data.record; // Extract actual data
-            document.getElementById("ph").innerText = record.ph;
             document.getElementById("temperature").innerText = record.temperature;
-            document.getElementById("gas").innerText = record.gas;
-            document.getElementById("turbidity").innerText = record.turbidity;
+            document.getElementById("humidity").innerText = record.humidity;
+            document.getElementById("light").innerText = record.light;
+            document.getElementById("mq3").innerText = record.mq3;
         })
         .catch(error => console.log("Error fetching data: ", error));
     }
