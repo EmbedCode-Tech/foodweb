@@ -453,6 +453,17 @@ tr:hover {
         </div>	
     </form>
 	<script>
+   function showMessage() {
+    var message = document.getElementById("message");
+    message.classList.remove("hidden"); // Show message
+    message.classList.add("visible"); // Apply animation
+
+    // Hide message after 3 seconds
+    setTimeout(function () {
+        message.classList.remove("visible");
+        message.classList.add("hidden");
+    }, 3000);
+}
 		
 function fetchData() {
         fetch("https://api.jsonbin.io/v3/b/679db215e41b4d34e4822105/latest", {
