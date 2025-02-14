@@ -77,6 +77,26 @@ body {
                 text-align: left;
             }
         }
+
+		
+    .paragraph-box {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(30px); /* Move down slightly */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* When the paragraph is in view, make it visible */
+.paragraph-box.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .paragraph-box {
     background-color: #f8f9fa;
     padding: 20px;
@@ -436,6 +456,18 @@ function fetchData() {
 
     window.addEventListener("scroll", checkScroll);
 });
+	
+	document.addEventListener("DOMContentLoaded", function () {
+        const paragraph = document.getElementById("About");
+        function checkVisibility() {
+            const rect = paragraph.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.8) {
+                paragraph.classList.add("visible");
+            }
+        }
+        window.addEventListener("scroll", checkVisibility);
+        checkVisibility(); // Initial check in case already in view
+    });
 
 	</script>
 </body>
