@@ -83,7 +83,7 @@ body {
 			
 		}
 
-    .paragraph-box {
+   .paragraph-box {
     width: 80%;
     margin: 50px auto;
     padding: 20px;
@@ -93,7 +93,12 @@ body {
     opacity: 0.3; /* Initially hidden */
     transform: translateY(30px); /* Move down slightly */
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    
+    /* Adding a blurred border effect */
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
 }
+
 
 /* When the paragraph is in view, make it visible */
 .paragraph-box.visible {
