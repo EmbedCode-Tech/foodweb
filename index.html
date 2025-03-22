@@ -22,33 +22,54 @@ body {
     padding: 0;
 }
 
-/*  Navbar Styling */
+/* Navbar List Items */
 .navbar-nav li {
-    display: inline-block; /* Horizontal layout */
-    margin: 0 12px; /* Add spacing between items */
-    padding: 5px 0;
+    display: inline-block; /* Horizontal layout by default */
+    margin: 0 12px; /* Space between items */
+    padding: 8px 12px;
     font-family: 'Poppins', sans-serif; /* Modern, clean font */
     font-size: 16px; /* Optimal readability */
     font-weight: 500; /* Medium weight */
-    letter-spacing: 0.5px; /* Slightly spaced letters */
+    letter-spacing: 0.5px; /* Slight letter spacing */
     transition: transform 0.3s ease, background-color 0.3s ease;
+    text-align: center; /* Align text properly */
 }
 
 /* Hover Effect */
 .navbar-nav li:hover {
     transform: translateY(-2px); /* Slight lift effect */
     font-weight: 600; /* Bold on hover */
+    background-color: #f4f4f4; /* Subtle hover background */
+    border-radius: 8px;
 }
 
-/* Responsive Design for Mobile */
-@media screen and (max-width: 768px) {
+/* Responsive Design - Tablet and Below */
+@media screen and (max-width: 992px) {
     .navbar-nav li {
         display: block; /* Stack items vertically */
-        margin: 8px 0; /* Add vertical spacing */
-        text-align: center;
-        font-size: 14px; /* Slightly smaller for mobile */
+        margin: 8px 0; /* Add spacing for mobile */
+        font-size: 15px; /* Slightly smaller font for tablets */
     }
 }
+
+/* Responsive Design - Mobile */
+@media screen and (max-width: 768px) {
+    .navbar-nav li {
+        text-align: center;
+        margin: 10px 0; /* Add more spacing for small devices */
+        font-size: 14px; /* Compact font for mobile */
+        padding: 10px;
+    }
+}
+
+/* Extra Small Devices */
+@media screen and (max-width: 480px) {
+    .navbar-nav li {
+        font-size: 13px; /* Smaller font for tiny devices */
+        padding: 8px 0;
+    }
+}
+
 
 
 
