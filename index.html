@@ -457,7 +457,7 @@ function fetchData() {
         .catch(error => console.log("Error fetching data: ", error));
     }
 
-    setInterval(fetchData, 5000); // Fetch data every 5 seconds
+    setInterval(fetchData, 300000); // Fetch data every 5 min
     fetchData();
 
 		document.addEventListener("DOMContentLoaded", function () {
