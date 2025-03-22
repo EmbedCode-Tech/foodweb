@@ -23,20 +23,33 @@ body {
 }
 
 /*  Navbar Styling */
-.navbar {
-    background-color: #22262d !important; /* Dark Navbar */
-    padding: 15px;
+.navbar-nav li {
+    display: inline-block; /* Horizontal layout */
+    margin: 0 12px; /* Add spacing between items */
+    padding: 5px 0;
+    font-family: 'Poppins', sans-serif; /* Modern, clean font */
+    font-size: 16px; /* Optimal readability */
+    font-weight: 500; /* Medium weight */
+    letter-spacing: 0.5px; /* Slightly spaced letters */
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.navbar-nav .nav-item .nav-link {
-    color: white !important;
-    font-weight: bold;
-    transition: color 0.3s ease;
+/* Hover Effect */
+.navbar-nav li:hover {
+    transform: translateY(-2px); /* Slight lift effect */
+    font-weight: 600; /* Bold on hover */
 }
 
-.navbar-nav .nav-item .nav-link:hover {
-    color: #17a2b8 !important; /* Light Blue Hover */
+/* Responsive Design for Mobile */
+@media screen and (max-width: 768px) {
+    .navbar-nav li {
+        display: block; /* Stack items vertically */
+        margin: 8px 0; /* Add vertical spacing */
+        text-align: center;
+        font-size: 14px; /* Slightly smaller for mobile */
+    }
 }
+
 
 
 /* Home Section Styling */
